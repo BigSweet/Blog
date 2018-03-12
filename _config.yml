@@ -26,7 +26,17 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-
+live2d:
+  enable: true
+  scriptFrom: local
+  model:
+    use: live2d-widget-model-epsilon2_1
+  display:
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: false
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
@@ -56,7 +66,24 @@ index_generator:
 default_category: uncategorized
 category_map:
 tag_map:
-
+jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: false
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
@@ -72,7 +99,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Yelee
+theme: hexo-theme-yilia
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
