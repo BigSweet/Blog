@@ -92,7 +92,6 @@ def compress_photo():
 
 def handle_photo():
     '''根据图片的文件名处理成需要的json格式的数据
-
     -----------
     最后将data.json文件存到博客的source/photos文件夹下
     '''
@@ -194,7 +193,4 @@ if __name__ == "__main__":
     compress_photo()   # 压缩图片，并保存到mini_photos文件夹下
     # git_operation()    # 提交到github仓库
     handle_photo()     # 将文件处理成json格式，存到博客仓库中
-    
-    
-    
     
