@@ -1,3 +1,7 @@
+---
+title: 漂亮的viewpager画廊效果
+date: 2018-04-26 17:48:16
+---
 首先看下效果图和整个项目的结构
 ![](http://upload-images.jianshu.io/upload_images/7568660-e94dc20ae03944a6.gif?imageMogr2/auto-orient/strip)
 
@@ -8,6 +12,7 @@
 现在开始分析代码
 
 首先看下MainActivity的代码
+<!--more-->
 ```
 public class MainActivity extends AppCompatActivity {
     private int pagerWidth;

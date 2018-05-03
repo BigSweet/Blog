@@ -1,3 +1,7 @@
+---
+title: 一行代码操作数据库GreenDao
+date: 2018-04-26 17:48:16
+---
 上篇文章写了[GreenDao的基本使用](http://blog.csdn.net/qq_15527709/article/details/62223308)，后来考虑了一下，发现还有封装的余地。
 所以我把初始化数据库的操作写到了基类中，这样就更加方便了,
 首先看下上篇的userdao要想得到dao，需要以下的几个基本步骤
@@ -11,6 +15,7 @@
 ```
 
 首先找到这里面的俩个变量"swt-db"，userdao，一个是数据库名字，一个是user表的操作对象，所以可以这样改
+<!--more-->
 ```
     mHelper = new DaoMaster.DevOpenHelper(this, getDbName(), null);
         db = mHelper.getWritableDatabase();

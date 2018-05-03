@@ -1,3 +1,7 @@
+---
+title: android秒启动unity，和给unity添加过渡图片
+date: 2018-04-26 17:48:16
+---
 1，本篇不讲解unity如何集成，网上很多，主要讲解下面几个点
      一，最容易出现的bug
      二，快速启动unity
@@ -21,7 +25,7 @@ public class MyUnityPlay extends UnityPlayer {
 
 }
 ```
-
+<!--more-->
 
 二，快速启动unity
 首先看下unity导出后的默认代码

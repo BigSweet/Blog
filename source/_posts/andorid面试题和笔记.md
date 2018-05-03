@@ -1,3 +1,7 @@
+---
+title: andorid面试题和笔记
+date: 2018-04-26 17:48:16
+---
 ##事件分发机制
 首先事件指的是触摸事件，首先是viewgroup的事件分发，viewgroup里面有子view，ViewGroup的相关事件有三个：onInterceptTouchEvent、dispatchTouchEvent、onTouchEvent。View的相关事件只有两个：dispatchTouchEvent、onTouchEvent。
 
@@ -13,7 +17,7 @@ ViewGroup还有个onInterceptTouchEvent，看名字便知道这是个拦截事�
 1.假如我们在某个ViewGroup的onInterceptTouchEvent中，将Action为Down的Touch事件返回true，那便表示将该ViewGroup的所有下发操作拦截掉，这种情况下，mTarget会一直为null，因为mTarget是在Down事件中赋值的。由于mTarge为null，该ViewGroup的onTouchEvent事件被执行。这种情况下可以把这个ViewGroup直接当成View来对待。
 
 2.假如我们在某个ViewGroup的onInterceptTouchEvent中，将Acion为Down的Touch事件都返回false，其他的都返回True，这种情况下，Down事件能正常分发，若子View都返回false，那mTarget还是为空，无影响。若某个子View返回了true，mTarget被赋值了，在Action_Move和Aciton_UP分发到该ViewGroup时，便会给mTarget分发一个Action_Delete的MotionEvent，同时清空mTarget的值，使得接下去的Action_Move(如果上一个操作不是UP)将由ViewGroup的onTouchEvent处理。
-
+<!--more-->
 Ontouch的优先级高于onclick,onclick的事件在ontouchevent中，只有在ontouch返回false的时候才会继续执行ontouchevent
 
 

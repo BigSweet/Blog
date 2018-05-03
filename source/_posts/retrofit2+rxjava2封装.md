@@ -1,5 +1,6 @@
 ---
 title: retrofit2+rxjava2封装
+date: 2018-04-26 17:48:14
 ---
 最近看了很多的资料和retrofit2和rxjava2的封装，有一些感悟，所以写下来
 这篇博客不讲retrofit2和rxjava2的用法，只讲封装

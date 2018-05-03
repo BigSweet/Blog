@@ -1,6 +1,11 @@
+---
+title: tniker热修复命令行接入
+date: 2018-04-26 17:48:16
+---
 上篇写了gradle导入的方式，这篇讲解命令行接入的方式
 首先还是导入包,同时修改下签名的配置
 很简单 直接放出源码
+  <!--more-->
 ```
 apply plugin: 'com.android.application'
 
@@ -19,6 +24,7 @@ android {
             storePassword '123456'
         }
     }
+  
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
     defaultConfig {

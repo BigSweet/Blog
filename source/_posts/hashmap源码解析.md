@@ -1,3 +1,7 @@
+---
+title: hashmap源码解析
+date: 2018-04-26 17:48:16
+---
 ##源码第一篇(hashmap)简单理解篇
 本篇讲解hashmap的put 方法的原理和一些源码的解析
 
@@ -14,7 +18,7 @@ hashmap是线程不安全的
 
 所以这里举一反三，带有同步锁的是线程安全的，比如ArrayList是非线程安全的，Vector是线程安全的；HashMap是非线程安全的，HashTable是线程安全的；StringBuilder是非线程安全的，StringBuffer是线程安全的，那么线程安全的会因为同步锁的关系，在性能上会有所降低
 
-
+<!--more-->
 进入正题
 当我们调用put方法放入key的时候，hashmap会调用hashcode方法获取哈希码，通过哈希码进行计算快速找到某个存放位置，这个位置可以被称之为bucketIndex，这个index的计算公式为
 ```
